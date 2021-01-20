@@ -1,0 +1,1104 @@
+HPL.dat: 
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+HPL.out      output file name (if any) 
+6            device out (6=stdout,7=stderr,file)
+1            # of problems sizes (N)
+7296         Ns
+1            # of NBs
+192           NBs
+0            PMAP process mapping (0=Row-,1=Column-major)
+1            # of process grids (P x Q)
+3            Ps
+4            Qs
+16.0         threshold
+1            # of panel fact
+2            PFACTs (0=left, 1=Crout, 2=Right)
+1            # of recursive stopping criterium
+4            NBMINs (>= 1)
+1            # of panels in recursion
+2            NDIVs
+1            # of recursive panel fact.
+1            RFACTs (0=left, 1=Crout, 2=Right)
+1            # of broadcast
+1            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            # of lookahead depth
+1            DEPTHs (>=0)
+2            SWAP (0=bin-exch,1=long,2=mix)
+64           swapping threshold
+0            L1 in (0=transposed,1=no-transposed) form
+0            U  in (0=transposed,1=no-transposed) form
+1            Equilibration (0=no,1=yes)
+8            memory alignment in double (> 0)
+##### This line (no. 32) is ignored (it serves as a separator). ######
+0                               Number of additional problem sizes for PTRANS
+1200 10000 30000                values of N
+0                               number of additional blocking sizes for PTRANS
+40 9 8 13 13 20 16 32 64        values of NB
+
+
+Binary name: 
+-rwxr-xr-x 1 rangsiman rangsiman 12833357 Dec 15 13:47 xhpl_intel64_dynamic
+This script: 
+Environment variables: 
+I_MPI_HYDRA_BRANCH_COUNT=-1
+LMOD_FAMILY_COMPILER_VERSION=19.0.5.281
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=pollux[2-3]
+MKLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl
+CPLUS_INCLUDE_PATH=/lustre/rangsiman/intel/clck/2019.5/include
+SLURM_JOB_NAME=HPL
+MANPATH=/opt/ohpc/pub/apps/intel/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:/lustre/rangsiman/intel/itac/2019.5.041/man:/lustre/rangsiman/intel/clck/2019.5/man:/lustre/rangsiman/intel/man/common:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man
+MPI_PROC_NUM=56
+XDG_SESSION_ID=464420
+SLURMD_NODENAME=pollux2
+SLURM_TOPOLOGY_ADDR=pollux2
+SLURM_NTASKS_PER_NODE=28
+HOSTNAME=pollux2
+VT_MPI=impi4
+__LMOD_REF_COUNT_CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar:3
+SLURM_PRIO_PROCESS=0
+IPPROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp
+SLURM_NODE_ALIASES=(null)
+INTEL_LICENSE_FILE=/opt/intel/licenses
+SHELL=/bin/bash
+TERM=xterm-256color
+__LMOD_REF_COUNT_MODULEPATH=/opt/ohpc/pub/moduledeps/intel:1;/opt/ohpc/pub/modulefiles:1
+CLCK_ROOT=/lustre/rangsiman/intel/clck/2019.5
+I_MPI_PIN_DOMAIN=auto
+I_MPI_FABRICS=shm:ofi
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SSH_CLIENT=192.168.2.240 40428 22
+__LMOD_STACK_CXX=aWNwYw==
+LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/clck/2019.5/lib/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7
+LMOD_PKG=/opt/ohpc/admin/lmod/lmod
+OUT=demo_xhpl_intel64_dynamic_outputs.txt
+OLDPWD=/home/rangsiman/codemania/demo
+__LMOD_STACK_IDB=aWRi
+LMOD_VERSION=7.8.15
+PSXE_2019=1
+SSH_TTY=/dev/pts/13
+__LMOD_STACK_FC=aWZvcnQ=
+__LMOD_REF_COUNT_LOADEDMODULES=intel/19.0.5.281:1
+__LMOD_STACK_CC=aWNj
+SLURM_MEM_PER_CPU=2048
+SLURM_NNODES=2
+USER=rangsiman
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:/home/rangsiman/libtool-2.4.6-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:/usr/lib64::
+PSTLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl
+FI_PROVIDER_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib/prov
+__LMOD_STACK_F77=aWZvcnQ=
+SLURM_JOBID=2982
+CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include
+MPI_PER_NODE=28
+__LMOD_REF_COUNT__LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua:1
+SLURM_NTASKS=56
+LMOD_PREPEND_BLOCK=normal
+NLSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin/locale/en_US/mkl_msg.cat
+SLURM_TASKS_PER_NODE=28(x2)
+PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:/home/rangsiman/libtool-2.4.6-install/bin:/home/rangsiman/automake-1.15-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:/lustre/rangsiman/intel/clck/2019.5/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/scripts:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:/home/rangsiman/.local/bin:/home/rangsiman/bin
+MAIL=/var/spool/mail/rangsiman
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIix9LG1UPXtpbnRlbD17WyJmbiJdPSIvb3B0L29ocGMvcHViL21vZHVsZWZpbGVzL2ludGVsLzE5LjAuNS4yODEubHVhIixbImZ1bGxOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17c3RhdGU9e1sidGVzdGluZyJdPTEsfSx9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLH0sfSxtcGF0aEE9eyIvb3B0L29ocGMvcHViL21vZHVsZWRlcHMvaW50ZWwiLCIvb3B0
+VT_ADD_LIBS=-ldwarf -lelf -lvtunwind -lm -lpthread
+I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+SLURM_WORKING_CLUSTER=chalawangpu:192.168.7.105:6817:8448
+__LMOD_STACK_F90=aWZvcnQ=
+SLURM_JOB_ID=2982
+LMOD_SETTARG_CMD=:
+TBBROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb
+HPL_EXE=xhpl_intel64_dynamic
+I_MPI_FALLBACK=0
+F90=ifort
+SLURM_JOB_USER=rangsiman
+PWD=/home/rangsiman/codemania/demo
+_LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua
+LANG=en_US.UTF-8
+MODULEPATH=/opt/ohpc/pub/moduledeps/intel:/opt/ohpc/pub/modulefiles
+LOADEDMODULES=intel/19.0.5.281
+__LMOD_REF_COUNT_INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:1;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info:1
+SLURM_JOB_UID=10133
+_ModuleTable_Sz_=2
+VT_LIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/lib
+SLURM_NODEID=0
+F77=ifort
+SLURM_SUBMIT_DIR=/home/rangsiman/codemania/demo
+SLURM_TASK_PID=67338
+SLURM_NPROCS=56
+LMOD_CMD=/opt/ohpc/admin/lmod/lmod/libexec/lmod
+VT_ROOT=/lustre/rangsiman/intel/itac/2019.5.041
+DAALROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal
+SLURM_CPUS_ON_NODE=28
+CXX=icpc
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+SLURM_JOB_NODELIST=pollux[2-3]
+INTEL_PYTHONHOME=/opt/ohpc/pub/apps/intel/debugger_2019/python/intel64
+I_MPI_HYDRA_PMI_CONNECT=alltoall
+HOME=/home/rangsiman
+SHLVL=2
+SLURM_LOCALID=0
+__LMOD_REF_COUNT_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/home/rangsiman/automake-1.15-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:2;/lustre/rangsiman/intel/clck/2019.5/bin/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:2;/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/scripts:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/ibutils/bin:1;/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:1;/home/rangsiman/.local/bin:1;/home/rangsiman/bin:1
+__LMOD_REF_COUNT_CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:4
+GDL_PATH=+/usr/share/gnudatalanguage
+SLURM_JOB_GID=10139
+SLURM_JOB_CPUS_PER_NODE=28(x2)
+SLURM_CLUSTER_NAME=chalawangpu
+_ModuleTable002_=L29ocGMvcHViL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvb2hwYy9wdWIvbW9kdWxlZmlsZXMiLH0=
+__LMOD_REF_COUNT_INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:1;/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:2;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include:1
+FC=ifort
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=pollux
+VT_ARCH=intel64
+VT_SLIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib
+SLURM_JOB_PARTITION=chalawan_gpu
+BASH_ENV=/opt/ohpc/admin/lmod/lmod/init/bash
+LOGNAME=rangsiman
+SSH_CONNECTION=192.168.2.240 40428 192.168.5.105 22
+XDG_DATA_DIRS=/home/rangsiman/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/clck/2019.5/lib/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4
+SLURM_JOB_NUM_NODES=2
+MODULESHOME=/opt/ohpc/admin/lmod/lmod
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_SETTARG_FULL_SUPPORT=no
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:5;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4;/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:1;/usr/lib64:1
+PKG_CONFIG_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig
+LMOD_FAMILY_COMPILER=intel
+LMOD_FULL_SETTARG_SUPPORT=no
+INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info
+CC=icc
+XDG_RUNTIME_DIR=/run/user/10133
+INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+LMOD_DIR=/opt/ohpc/admin/lmod/lmod/libexec
+__LMOD_REF_COUNT_MANPATH=/opt/ohpc/pub/apps/intel/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:3;/lustre/rangsiman/intel/itac/2019.5.041/man:1;/lustre/rangsiman/intel/clck/2019.5/man:1;/lustre/rangsiman/intel/man/common:2;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:1;/usr/local/share/man:1;/usr/share/man/overrides:1;/usr/share/man/en:1;/usr/share/man:1
+LMOD_COLORIZE=no
+IDB=idb
+I_MPI_ROOT=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
+Actual run: 
+RANK=2, NODE=2
+RANK=0, NODE=0
+RANK=3, NODE=3
+RANK=4, NODE=4
+RANK=6, NODE=6
+RANK=1, NODE=1
+RANK=5, NODE=5
+RANK=29, NODE=1
+RANK=36, NODE=8
+RANK=40, NODE=12
+RANK=31, NODE=3
+RANK=32, NODE=4
+RANK=30, NODE=2
+RANK=38, NODE=10
+RANK=39, NODE=11
+RANK=35, NODE=7
+RANK=45, NODE=17
+RANK=43, NODE=15
+RANK=44, NODE=16
+RANK=28, NODE=0
+RANK=33, NODE=5
+RANK=37, NODE=9
+RANK=34, NODE=6
+RANK=41, NODE=13
+RANK=7, NODE=7
+RANK=47, NODE=19
+RANK=46, NODE=18
+RANK=49, NODE=21
+RANK=50, NODE=22
+RANK=48, NODE=20
+RANK=51, NODE=23
+RANK=52, NODE=24
+RANK=53, NODE=25
+RANK=54, NODE=26
+RANK=55, NODE=27
+RANK=15, NODE=15
+RANK=8, NODE=8
+RANK=10, NODE=10
+RANK=16, NODE=16
+RANK=9, NODE=9
+RANK=12, NODE=12
+RANK=13, NODE=13
+RANK=11, NODE=11
+RANK=18, NODE=18
+RANK=19, NODE=19
+RANK=20, NODE=20
+RANK=21, NODE=21
+RANK=17, NODE=17
+RANK=23, NODE=23
+RANK=24, NODE=24
+RANK=25, NODE=25
+RANK=27, NODE=27
+RANK=22, NODE=22
+RANK=26, NODE=26
+RANK=14, NODE=14
+RANK=42, NODE=14
+Number of Heterogeneous data entries for HPL.dat=0
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    7296 
+NB       :     192 
+PMAP     : Row-major process mapping
+P        :       3 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       4 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :  1ringM 
+DEPTH    :       1 
+SWAP     : Mix (threshold = 64)
+L1       : transposed form
+U        : transposed form
+EQUIL    : yes
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+pollux2         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=  444.50
+pollux2         : Column=000384 Fraction=0.030 Kernel=  602.72 Mflops=  509.58
+HPL.dat: 
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+HPL.out      output file name (if any) 
+6            device out (6=stdout,7=stderr,file)
+1            # of problems sizes (N)
+1000         Ns
+1            # of NBs
+192           NBs
+0            PMAP process mapping (0=Row-,1=Column-major)
+1            # of process grids (P x Q)
+3            Ps
+4            Qs
+16.0         threshold
+1            # of panel fact
+2            PFACTs (0=left, 1=Crout, 2=Right)
+1            # of recursive stopping criterium
+4            NBMINs (>= 1)
+1            # of panels in recursion
+2            NDIVs
+1            # of recursive panel fact.
+1            RFACTs (0=left, 1=Crout, 2=Right)
+1            # of broadcast
+1            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            # of lookahead depth
+1            DEPTHs (>=0)
+2            SWAP (0=bin-exch,1=long,2=mix)
+64           swapping threshold
+0            L1 in (0=transposed,1=no-transposed) form
+0            U  in (0=transposed,1=no-transposed) form
+1            Equilibration (0=no,1=yes)
+8            memory alignment in double (> 0)
+##### This line (no. 32) is ignored (it serves as a separator). ######
+0                               Number of additional problem sizes for PTRANS
+1200 10000 30000                values of N
+0                               number of additional blocking sizes for PTRANS
+40 9 8 13 13 20 16 32 64        values of NB
+
+
+Binary name: 
+-rwxr-xr-x 1 rangsiman rangsiman 12833357 Dec 15 13:47 xhpl_intel64_dynamic
+This script: 
+Environment variables: 
+I_MPI_HYDRA_BRANCH_COUNT=-1
+LMOD_FAMILY_COMPILER_VERSION=19.0.5.281
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=pollux[1-2]
+MKLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl
+CPLUS_INCLUDE_PATH=/lustre/rangsiman/intel/clck/2019.5/include
+SLURM_JOB_NAME=HPL
+MANPATH=/opt/ohpc/pub/apps/intel/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:/lustre/rangsiman/intel/itac/2019.5.041/man:/lustre/rangsiman/intel/clck/2019.5/man:/lustre/rangsiman/intel/man/common:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man
+MPI_PROC_NUM=48
+XDG_SESSION_ID=464420
+SLURMD_NODENAME=pollux1
+SLURM_TOPOLOGY_ADDR=pollux1
+SLURM_NTASKS_PER_NODE=24
+HOSTNAME=pollux1
+VT_MPI=impi4
+__LMOD_REF_COUNT_CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar:3
+SLURM_PRIO_PROCESS=0
+IPPROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp
+SLURM_NODE_ALIASES=(null)
+INTEL_LICENSE_FILE=/opt/intel/licenses
+SHELL=/bin/bash
+TERM=xterm-256color
+__LMOD_REF_COUNT_MODULEPATH=/opt/ohpc/pub/moduledeps/intel:1;/opt/ohpc/pub/modulefiles:1
+CLCK_ROOT=/lustre/rangsiman/intel/clck/2019.5
+I_MPI_PIN_DOMAIN=auto
+I_MPI_FABRICS=shm:ofi
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SSH_CLIENT=192.168.2.240 40428 22
+__LMOD_STACK_CXX=aWNwYw==
+LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/clck/2019.5/lib/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7
+LMOD_PKG=/opt/ohpc/admin/lmod/lmod
+OUT=demo_xhpl_intel64_dynamic_outputs.txt
+OLDPWD=/home/rangsiman/codemania/demo
+__LMOD_STACK_IDB=aWRi
+LMOD_VERSION=7.8.15
+PSXE_2019=1
+SSH_TTY=/dev/pts/13
+__LMOD_STACK_FC=aWZvcnQ=
+__LMOD_REF_COUNT_LOADEDMODULES=intel/19.0.5.281:1
+__LMOD_STACK_CC=aWNj
+SLURM_MEM_PER_CPU=2048
+SLURM_NNODES=2
+USER=rangsiman
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:/home/rangsiman/libtool-2.4.6-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:/usr/lib64::
+PSTLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl
+FI_PROVIDER_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib/prov
+__LMOD_STACK_F77=aWZvcnQ=
+SLURM_JOBID=2983
+CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include
+MPI_PER_NODE=24
+__LMOD_REF_COUNT__LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua:1
+SLURM_NTASKS=48
+LMOD_PREPEND_BLOCK=normal
+NLSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin/locale/en_US/mkl_msg.cat
+SLURM_TASKS_PER_NODE=24(x2)
+PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:/home/rangsiman/libtool-2.4.6-install/bin:/home/rangsiman/automake-1.15-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:/lustre/rangsiman/intel/clck/2019.5/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/scripts:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:/home/rangsiman/.local/bin:/home/rangsiman/bin
+MAIL=/var/spool/mail/rangsiman
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIix9LG1UPXtpbnRlbD17WyJmbiJdPSIvb3B0L29ocGMvcHViL21vZHVsZWZpbGVzL2ludGVsLzE5LjAuNS4yODEubHVhIixbImZ1bGxOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17c3RhdGU9e1sidGVzdGluZyJdPTEsfSx9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLH0sfSxtcGF0aEE9eyIvb3B0L29ocGMvcHViL21vZHVsZWRlcHMvaW50ZWwiLCIvb3B0
+VT_ADD_LIBS=-ldwarf -lelf -lvtunwind -lm -lpthread
+I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+SLURM_WORKING_CLUSTER=chalawangpu:192.168.7.105:6817:8448
+__LMOD_STACK_F90=aWZvcnQ=
+SLURM_JOB_ID=2983
+LMOD_SETTARG_CMD=:
+TBBROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb
+HPL_EXE=xhpl_intel64_dynamic
+I_MPI_FALLBACK=0
+F90=ifort
+SLURM_JOB_USER=rangsiman
+PWD=/home/rangsiman/codemania/demo
+_LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua
+LANG=en_US.UTF-8
+MODULEPATH=/opt/ohpc/pub/moduledeps/intel:/opt/ohpc/pub/modulefiles
+LOADEDMODULES=intel/19.0.5.281
+__LMOD_REF_COUNT_INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:1;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info:1
+SLURM_JOB_UID=10133
+_ModuleTable_Sz_=2
+VT_LIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/lib
+SLURM_NODEID=0
+F77=ifort
+SLURM_SUBMIT_DIR=/home/rangsiman/codemania/demo
+SLURM_TASK_PID=155801
+SLURM_NPROCS=48
+LMOD_CMD=/opt/ohpc/admin/lmod/lmod/libexec/lmod
+VT_ROOT=/lustre/rangsiman/intel/itac/2019.5.041
+DAALROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal
+SLURM_CPUS_ON_NODE=24
+CXX=icpc
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+SLURM_JOB_NODELIST=pollux[1-2]
+INTEL_PYTHONHOME=/opt/ohpc/pub/apps/intel/debugger_2019/python/intel64
+I_MPI_HYDRA_PMI_CONNECT=alltoall
+HOME=/home/rangsiman
+SHLVL=2
+SLURM_LOCALID=0
+__LMOD_REF_COUNT_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/home/rangsiman/automake-1.15-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:2;/lustre/rangsiman/intel/clck/2019.5/bin/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:2;/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/scripts:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/ibutils/bin:1;/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:1;/home/rangsiman/.local/bin:1;/home/rangsiman/bin:1
+__LMOD_REF_COUNT_CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:4
+GDL_PATH=+/usr/share/gnudatalanguage
+SLURM_JOB_GID=10139
+SLURM_JOB_CPUS_PER_NODE=24(x2)
+SLURM_CLUSTER_NAME=chalawangpu
+_ModuleTable002_=L29ocGMvcHViL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvb2hwYy9wdWIvbW9kdWxlZmlsZXMiLH0=
+__LMOD_REF_COUNT_INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:1;/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:2;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include:1
+FC=ifort
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=pollux
+VT_ARCH=intel64
+VT_SLIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib
+SLURM_JOB_PARTITION=chalawan_gpu
+BASH_ENV=/opt/ohpc/admin/lmod/lmod/init/bash
+LOGNAME=rangsiman
+SSH_CONNECTION=192.168.2.240 40428 192.168.5.105 22
+XDG_DATA_DIRS=/home/rangsiman/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/clck/2019.5/lib/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4
+SLURM_JOB_NUM_NODES=2
+MODULESHOME=/opt/ohpc/admin/lmod/lmod
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_SETTARG_FULL_SUPPORT=no
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:5;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4;/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:1;/usr/lib64:1
+PKG_CONFIG_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig
+LMOD_FAMILY_COMPILER=intel
+LMOD_FULL_SETTARG_SUPPORT=no
+INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info
+CC=icc
+XDG_RUNTIME_DIR=/run/user/10133
+INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+LMOD_DIR=/opt/ohpc/admin/lmod/lmod/libexec
+__LMOD_REF_COUNT_MANPATH=/opt/ohpc/pub/apps/intel/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:3;/lustre/rangsiman/intel/itac/2019.5.041/man:1;/lustre/rangsiman/intel/clck/2019.5/man:1;/lustre/rangsiman/intel/man/common:2;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:1;/usr/local/share/man:1;/usr/share/man/overrides:1;/usr/share/man/en:1;/usr/share/man:1
+LMOD_COLORIZE=no
+IDB=idb
+I_MPI_ROOT=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
+Actual run: 
+RANK=1, NODE=1
+RANK=2, NODE=2
+RANK=3, NODE=3
+RANK=4, NODE=4
+RANK=5, NODE=5
+RANK=6, NODE=6
+RANK=7, NODE=7
+RANK=8, NODE=8
+RANK=13, NODE=13
+RANK=14, NODE=14
+RANK=10, NODE=10
+RANK=9, NODE=9
+RANK=11, NODE=11
+RANK=15, NODE=15
+RANK=12, NODE=12
+RANK=16, NODE=16
+RANK=17, NODE=17
+RANK=21, NODE=21
+RANK=18, NODE=18
+RANK=19, NODE=19
+RANK=0, NODE=0
+RANK=20, NODE=20
+RANK=22, NODE=22
+RANK=23, NODE=23
+RANK=26, NODE=2
+RANK=38, NODE=14
+RANK=24, NODE=0
+RANK=25, NODE=1
+RANK=27, NODE=3
+RANK=32, NODE=8
+RANK=30, NODE=6
+RANK=29, NODE=5
+RANK=36, NODE=12
+RANK=34, NODE=10
+RANK=47, NODE=23
+RANK=28, NODE=4
+RANK=35, NODE=11
+RANK=37, NODE=13
+RANK=31, NODE=7
+RANK=39, NODE=15
+RANK=44, NODE=20
+RANK=40, NODE=16
+RANK=41, NODE=17
+RANK=33, NODE=9
+RANK=46, NODE=22
+RANK=43, NODE=19
+RANK=45, NODE=21
+RANK=42, NODE=18
+Number of Heterogeneous data entries for HPL.dat=0
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    1000 
+NB       :     192 
+PMAP     : Row-major process mapping
+P        :       3 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       4 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :  1ringM 
+DEPTH    :       1 
+SWAP     : Mix (threshold = 64)
+L1       : transposed form
+U        : transposed form
+EQUIL    : yes
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+pollux1         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=    7.06
+pollux1         : Column=000384 Fraction=0.195 Kernel=    6.34 Mflops=    6.77
+pollux1         : Column=000576 Fraction=0.385 Kernel=    2.45 Mflops=    5.21
+pollux1         : Column=000768 Fraction=0.595 Kernel=    1.06 Mflops=    4.17
+HPL.dat: 
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+HPL.out      output file name (if any) 
+6            device out (6=stdout,7=stderr,file)
+1            # of problems sizes (N)
+1000         Ns
+1            # of NBs
+192           NBs
+0            PMAP process mapping (0=Row-,1=Column-major)
+1            # of process grids (P x Q)
+3            Ps
+4            Qs
+16.0         threshold
+1            # of panel fact
+2            PFACTs (0=left, 1=Crout, 2=Right)
+1            # of recursive stopping criterium
+4            NBMINs (>= 1)
+1            # of panels in recursion
+2            NDIVs
+1            # of recursive panel fact.
+1            RFACTs (0=left, 1=Crout, 2=Right)
+1            # of broadcast
+1            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            # of lookahead depth
+1            DEPTHs (>=0)
+2            SWAP (0=bin-exch,1=long,2=mix)
+64           swapping threshold
+0            L1 in (0=transposed,1=no-transposed) form
+0            U  in (0=transposed,1=no-transposed) form
+1            Equilibration (0=no,1=yes)
+8            memory alignment in double (> 0)
+##### This line (no. 32) is ignored (it serves as a separator). ######
+0                               Number of additional problem sizes for PTRANS
+1200 10000 30000                values of N
+0                               number of additional blocking sizes for PTRANS
+40 9 8 13 13 20 16 32 64        values of NB
+
+
+Binary name: 
+-rwxr-xr-x 1 rangsiman rangsiman 12833357 Dec 15 13:47 xhpl_intel64_dynamic
+Environment variables: 
+I_MPI_HYDRA_BRANCH_COUNT=-1
+LMOD_FAMILY_COMPILER_VERSION=19.0.5.281
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=pollux[1-2]
+MKLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl
+CPLUS_INCLUDE_PATH=/lustre/rangsiman/intel/clck/2019.5/include
+SLURM_JOB_NAME=HPL
+MANPATH=/opt/ohpc/pub/apps/intel/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:/lustre/rangsiman/intel/itac/2019.5.041/man:/lustre/rangsiman/intel/clck/2019.5/man:/lustre/rangsiman/intel/man/common:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man
+MPI_PROC_NUM=24
+XDG_SESSION_ID=464420
+SLURMD_NODENAME=pollux1
+SLURM_TOPOLOGY_ADDR=pollux1
+SLURM_NTASKS_PER_NODE=12
+HOSTNAME=pollux1
+VT_MPI=impi4
+__LMOD_REF_COUNT_CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar:3
+SLURM_PRIO_PROCESS=0
+IPPROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp
+SLURM_NODE_ALIASES=(null)
+INTEL_LICENSE_FILE=/opt/intel/licenses
+SHELL=/bin/bash
+TERM=xterm-256color
+__LMOD_REF_COUNT_MODULEPATH=/opt/ohpc/pub/moduledeps/intel:1;/opt/ohpc/pub/modulefiles:1
+CLCK_ROOT=/lustre/rangsiman/intel/clck/2019.5
+I_MPI_PIN_DOMAIN=auto
+I_MPI_FABRICS=shm:ofi
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SSH_CLIENT=192.168.2.240 40428 22
+__LMOD_STACK_CXX=aWNwYw==
+LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/clck/2019.5/lib/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7
+LMOD_PKG=/opt/ohpc/admin/lmod/lmod
+OUT=demo_xhpl_intel64_dynamic_outputs.txt
+OLDPWD=/home/rangsiman/codemania/demo
+__LMOD_STACK_IDB=aWRi
+LMOD_VERSION=7.8.15
+PSXE_2019=1
+SSH_TTY=/dev/pts/13
+__LMOD_STACK_FC=aWZvcnQ=
+__LMOD_REF_COUNT_LOADEDMODULES=intel/19.0.5.281:1
+__LMOD_STACK_CC=aWNj
+SLURM_MEM_PER_CPU=2048
+SLURM_NNODES=2
+USER=rangsiman
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:/home/rangsiman/libtool-2.4.6-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:/usr/lib64::
+PSTLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl
+FI_PROVIDER_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib/prov
+__LMOD_STACK_F77=aWZvcnQ=
+SLURM_JOBID=2986
+CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include
+MPI_PER_NODE=12
+__LMOD_REF_COUNT__LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua:1
+SLURM_NTASKS=24
+LMOD_PREPEND_BLOCK=normal
+NLSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin/locale/en_US/mkl_msg.cat
+SLURM_TASKS_PER_NODE=12(x2)
+PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:/home/rangsiman/libtool-2.4.6-install/bin:/home/rangsiman/automake-1.15-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:/lustre/rangsiman/intel/clck/2019.5/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/scripts:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:/home/rangsiman/.local/bin:/home/rangsiman/bin
+MAIL=/var/spool/mail/rangsiman
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIix9LG1UPXtpbnRlbD17WyJmbiJdPSIvb3B0L29ocGMvcHViL21vZHVsZWZpbGVzL2ludGVsLzE5LjAuNS4yODEubHVhIixbImZ1bGxOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17c3RhdGU9e1sidGVzdGluZyJdPTEsfSx9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLH0sfSxtcGF0aEE9eyIvb3B0L29ocGMvcHViL21vZHVsZWRlcHMvaW50ZWwiLCIvb3B0
+VT_ADD_LIBS=-ldwarf -lelf -lvtunwind -lm -lpthread
+I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+SLURM_WORKING_CLUSTER=chalawangpu:192.168.7.105:6817:8448
+__LMOD_STACK_F90=aWZvcnQ=
+SLURM_JOB_ID=2986
+LMOD_SETTARG_CMD=:
+TBBROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb
+HPL_EXE=xhpl_intel64_dynamic
+I_MPI_FALLBACK=0
+F90=ifort
+SLURM_JOB_USER=rangsiman
+PWD=/home/rangsiman/codemania/demo
+_LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua
+LANG=en_US.UTF-8
+MODULEPATH=/opt/ohpc/pub/moduledeps/intel:/opt/ohpc/pub/modulefiles
+LOADEDMODULES=intel/19.0.5.281
+__LMOD_REF_COUNT_INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:1;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info:1
+SLURM_JOB_UID=10133
+_ModuleTable_Sz_=2
+VT_LIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/lib
+SLURM_NODEID=0
+F77=ifort
+SLURM_SUBMIT_DIR=/home/rangsiman/codemania/demo
+SLURM_TASK_PID=158121
+SLURM_NPROCS=24
+LMOD_CMD=/opt/ohpc/admin/lmod/lmod/libexec/lmod
+VT_ROOT=/lustre/rangsiman/intel/itac/2019.5.041
+DAALROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal
+SLURM_CPUS_ON_NODE=12
+CXX=icpc
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+SLURM_JOB_NODELIST=pollux[1-2]
+INTEL_PYTHONHOME=/opt/ohpc/pub/apps/intel/debugger_2019/python/intel64
+I_MPI_HYDRA_PMI_CONNECT=alltoall
+HOME=/home/rangsiman
+SHLVL=2
+SLURM_LOCALID=0
+__LMOD_REF_COUNT_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/home/rangsiman/automake-1.15-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:2;/lustre/rangsiman/intel/clck/2019.5/bin/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:2;/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/scripts:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/ibutils/bin:1;/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:1;/home/rangsiman/.local/bin:1;/home/rangsiman/bin:1
+__LMOD_REF_COUNT_CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:4
+GDL_PATH=+/usr/share/gnudatalanguage
+SLURM_JOB_GID=10139
+SLURM_JOB_CPUS_PER_NODE=12(x2)
+SLURM_CLUSTER_NAME=chalawangpu
+_ModuleTable002_=L29ocGMvcHViL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvb2hwYy9wdWIvbW9kdWxlZmlsZXMiLH0=
+__LMOD_REF_COUNT_INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:1;/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:2;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include:1
+FC=ifort
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=pollux
+VT_ARCH=intel64
+VT_SLIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib
+SLURM_JOB_PARTITION=chalawan_gpu
+BASH_ENV=/opt/ohpc/admin/lmod/lmod/init/bash
+LOGNAME=rangsiman
+SSH_CONNECTION=192.168.2.240 40428 192.168.5.105 22
+XDG_DATA_DIRS=/home/rangsiman/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/clck/2019.5/lib/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4
+SLURM_JOB_NUM_NODES=2
+MODULESHOME=/opt/ohpc/admin/lmod/lmod
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_SETTARG_FULL_SUPPORT=no
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:5;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4;/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:1;/usr/lib64:1
+PKG_CONFIG_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig
+LMOD_FAMILY_COMPILER=intel
+LMOD_FULL_SETTARG_SUPPORT=no
+INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info
+CC=icc
+XDG_RUNTIME_DIR=/run/user/10133
+INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+LMOD_DIR=/opt/ohpc/admin/lmod/lmod/libexec
+__LMOD_REF_COUNT_MANPATH=/opt/ohpc/pub/apps/intel/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:3;/lustre/rangsiman/intel/itac/2019.5.041/man:1;/lustre/rangsiman/intel/clck/2019.5/man:1;/lustre/rangsiman/intel/man/common:2;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:1;/usr/local/share/man:1;/usr/share/man/overrides:1;/usr/share/man/en:1;/usr/share/man:1
+LMOD_COLORIZE=no
+IDB=idb
+I_MPI_ROOT=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
+Actual run: 
+RANK=2, NODE=2
+RANK=7, NODE=7
+RANK=1, NODE=1
+RANK=3, NODE=3
+RANK=6, NODE=6
+RANK=5, NODE=5
+RANK=4, NODE=4
+RANK=9, NODE=9
+RANK=8, NODE=8
+RANK=11, NODE=11
+RANK=10, NODE=10
+RANK=0, NODE=0
+RANK=13, NODE=1
+RANK=15, NODE=3
+RANK=14, NODE=2
+RANK=23, NODE=11
+RANK=12, NODE=0
+RANK=17, NODE=5
+RANK=18, NODE=6
+RANK=19, NODE=7
+RANK=21, NODE=9
+RANK=16, NODE=4
+RANK=22, NODE=10
+RANK=20, NODE=8
+Number of Heterogeneous data entries for HPL.dat=0
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    1000 
+NB       :     192 
+PMAP     : Row-major process mapping
+P        :       3 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       4 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :  1ringM 
+DEPTH    :       1 
+SWAP     : Mix (threshold = 64)
+L1       : transposed form
+U        : transposed form
+EQUIL    : yes
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+pollux1         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=   14.95
+pollux1         : Column=000384 Fraction=0.195 Kernel=   13.71 Mflops=   14.45
+HPL.dat: 
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+HPL.out      output file name (if any) 
+6            device out (6=stdout,7=stderr,file)
+1            # of problems sizes (N)
+1000         Ns
+1            # of NBs
+192           NBs
+0            PMAP process mapping (0=Row-,1=Column-major)
+1            # of process grids (P x Q)
+3            Ps
+4            Qs
+16.0         threshold
+1            # of panel fact
+2            PFACTs (0=left, 1=Crout, 2=Right)
+1            # of recursive stopping criterium
+4            NBMINs (>= 1)
+1            # of panels in recursion
+2            NDIVs
+1            # of recursive panel fact.
+1            RFACTs (0=left, 1=Crout, 2=Right)
+1            # of broadcast
+1            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            # of lookahead depth
+1            DEPTHs (>=0)
+2            SWAP (0=bin-exch,1=long,2=mix)
+64           swapping threshold
+0            L1 in (0=transposed,1=no-transposed) form
+0            U  in (0=transposed,1=no-transposed) form
+1            Equilibration (0=no,1=yes)
+8            memory alignment in double (> 0)
+##### This line (no. 32) is ignored (it serves as a separator). ######
+0                               Number of additional problem sizes for PTRANS
+1200 10000 30000                values of N
+0                               number of additional blocking sizes for PTRANS
+40 9 8 13 13 20 16 32 64        values of NB
+
+
+Binary name: 
+-rwxr-xr-x 1 rangsiman rangsiman 12833357 Dec 15 13:47 xhpl_intel64_dynamic
+Environment variables: 
+I_MPI_HYDRA_BRANCH_COUNT=-1
+LMOD_FAMILY_COMPILER_VERSION=19.0.5.281
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=pollux[1-2]
+MKLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl
+CPLUS_INCLUDE_PATH=/lustre/rangsiman/intel/clck/2019.5/include
+SLURM_JOB_NAME=HPL
+MANPATH=/opt/ohpc/pub/apps/intel/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:/lustre/rangsiman/intel/itac/2019.5.041/man:/lustre/rangsiman/intel/clck/2019.5/man:/lustre/rangsiman/intel/man/common:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man
+MPI_PROC_NUM=24
+XDG_SESSION_ID=464420
+SLURMD_NODENAME=pollux1
+SLURM_TOPOLOGY_ADDR=pollux1
+SLURM_NTASKS_PER_NODE=12
+HOSTNAME=pollux1
+VT_MPI=impi4
+__LMOD_REF_COUNT_CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar:3
+SLURM_PRIO_PROCESS=0
+IPPROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp
+SLURM_NODE_ALIASES=(null)
+INTEL_LICENSE_FILE=/opt/intel/licenses
+SHELL=/bin/bash
+TERM=xterm-256color
+__LMOD_REF_COUNT_MODULEPATH=/opt/ohpc/pub/moduledeps/intel:1;/opt/ohpc/pub/modulefiles:1
+CLCK_ROOT=/lustre/rangsiman/intel/clck/2019.5
+I_MPI_PIN_DOMAIN=auto
+I_MPI_FABRICS=shm:ofi
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SSH_CLIENT=192.168.2.240 40428 22
+__LMOD_STACK_CXX=aWNwYw==
+LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/clck/2019.5/lib/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7
+LMOD_PKG=/opt/ohpc/admin/lmod/lmod
+OUT=demo_xhpl_intel64_dynamic_outputs.txt
+OLDPWD=/home/rangsiman/codemania/demo
+__LMOD_STACK_IDB=aWRi
+LMOD_VERSION=7.8.15
+PSXE_2019=1
+SSH_TTY=/dev/pts/13
+__LMOD_STACK_FC=aWZvcnQ=
+__LMOD_REF_COUNT_LOADEDMODULES=intel/19.0.5.281:1
+__LMOD_STACK_CC=aWNj
+SLURM_MEM_PER_CPU=2048
+SLURM_NNODES=2
+USER=rangsiman
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:/home/rangsiman/libtool-2.4.6-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:/usr/lib64::
+PSTLROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl
+FI_PROVIDER_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib/prov
+__LMOD_STACK_F77=aWZvcnQ=
+SLURM_JOBID=2988
+CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include
+MPI_PER_NODE=2
+__LMOD_REF_COUNT__LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua:1
+SLURM_NTASKS=24
+LMOD_PREPEND_BLOCK=normal
+NLSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin/locale/en_US/mkl_msg.cat
+SLURM_TASKS_PER_NODE=12(x2)
+PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:/home/rangsiman/libtool-2.4.6-install/bin:/home/rangsiman/automake-1.15-install/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:/lustre/rangsiman/intel/clck/2019.5/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:/opt/ohpc/pub/apps/scripts:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:/home/rangsiman/.local/bin:/home/rangsiman/bin
+MAIL=/var/spool/mail/rangsiman
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIix9LG1UPXtpbnRlbD17WyJmbiJdPSIvb3B0L29ocGMvcHViL21vZHVsZWZpbGVzL2ludGVsLzE5LjAuNS4yODEubHVhIixbImZ1bGxOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17c3RhdGU9e1sidGVzdGluZyJdPTEsfSx9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImludGVsLzE5LjAuNS4yODEiLH0sfSxtcGF0aEE9eyIvb3B0L29ocGMvcHViL21vZHVsZWRlcHMvaW50ZWwiLCIvb3B0
+VT_ADD_LIBS=-ldwarf -lelf -lvtunwind -lm -lpthread
+I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+SLURM_WORKING_CLUSTER=chalawangpu:192.168.7.105:6817:8448
+__LMOD_STACK_F90=aWZvcnQ=
+SLURM_JOB_ID=2988
+LMOD_SETTARG_CMD=:
+TBBROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb
+HPL_EXE=xhpl_intel64_dynamic
+I_MPI_FALLBACK=0
+F90=ifort
+SLURM_JOB_USER=rangsiman
+PWD=/home/rangsiman/codemania/demo
+_LMFILES_=/opt/ohpc/pub/modulefiles/intel/19.0.5.281.lua
+LANG=en_US.UTF-8
+MODULEPATH=/opt/ohpc/pub/moduledeps/intel:/opt/ohpc/pub/modulefiles
+LOADEDMODULES=intel/19.0.5.281
+__LMOD_REF_COUNT_INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:1;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info:1
+SLURM_JOB_UID=10133
+_ModuleTable_Sz_=2
+VT_LIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/lib
+SLURM_NODEID=0
+F77=ifort
+SLURM_SUBMIT_DIR=/home/rangsiman/codemania/demo
+SLURM_TASK_PID=159485
+SLURM_NPROCS=24
+LMOD_CMD=/opt/ohpc/admin/lmod/lmod/libexec/lmod
+VT_ROOT=/lustre/rangsiman/intel/itac/2019.5.041
+DAALROOT=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal
+SLURM_CPUS_ON_NODE=12
+CXX=icpc
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+SLURM_JOB_NODELIST=pollux[1-2]
+INTEL_PYTHONHOME=/opt/ohpc/pub/apps/intel/debugger_2019/python/intel64
+I_MPI_HYDRA_PMI_CONNECT=alltoall
+HOME=/home/rangsiman
+SHLVL=2
+SLURM_LOCALID=0
+__LMOD_REF_COUNT_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/bin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/bin:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/home/rangsiman/automake-1.15-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/bin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/bin:2;/lustre/rangsiman/intel/clck/2019.5/bin/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/bin:2;/lustre/rangsiman/intel/debugger_2019/gdb/intel64/bin:1;/opt/ohpc/pub/apps/scripts:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/ibutils/bin:1;/lustre/rangsiman/intel/parallel_studio_xe_2019.5.075/bin:1;/home/rangsiman/.local/bin:1;/home/rangsiman/bin:1
+__LMOD_REF_COUNT_CPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/pstl/include:2;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/include:4
+GDL_PATH=+/usr/share/gnudatalanguage
+SLURM_JOB_GID=10139
+SLURM_JOB_CPUS_PER_NODE=12(x2)
+SLURM_CLUSTER_NAME=chalawangpu
+_ModuleTable002_=L29ocGMvcHViL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvb2hwYy9wdWIvbW9kdWxlZmlsZXMiLH0=
+__LMOD_REF_COUNT_INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:1;/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:2;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include:1
+FC=ifort
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=pollux
+VT_ARCH=intel64
+VT_SLIB_DIR=/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib
+SLURM_JOB_PARTITION=chalawan_gpu
+BASH_ENV=/opt/ohpc/admin/lmod/lmod/init/bash
+LOGNAME=rangsiman
+SSH_CONNECTION=192.168.2.240 40428 192.168.5.105 22
+XDG_DATA_DIRS=/home/rangsiman/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+CLASSPATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/daal.jar:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/mpi.jar
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/clck/2019.5/lib/intel64:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4
+SLURM_JOB_NUM_NODES=2
+MODULESHOME=/opt/ohpc/admin/lmod/lmod
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_SETTARG_FULL_SUPPORT=no
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.7:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/lib/clang/9.0.0/lib/linux:1;/home/rangsiman/libtool-2.4.6-install/bin:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:5;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release:3;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib:3;/lustre/rangsiman/intel/itac/2019.5.041/intel64/slib:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:4;/lustre/rangsiman/intel/debugger_2019/libipt/intel64/lib:1;/usr/lib64:1
+PKG_CONFIG_PATH=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig:/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mkl/bin/pkgconfig
+LMOD_FAMILY_COMPILER=intel
+LMOD_FULL_SETTARG_SUPPORT=no
+INFOPATH=/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/info:/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/info
+CC=icc
+XDG_RUNTIME_DIR=/run/user/10133
+INCLUDE=/opt/ohpc/pub/apps/intel/debugger_2019/libipt/intel64/include:/opt/ohpc/pub/apps/intel/debugger_2019/gdb/intel64/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/mkl/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/daal/include:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/sdlt:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc:/opt/ohpc/pub/apps/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+LMOD_DIR=/opt/ohpc/admin/lmod/lmod/libexec
+__LMOD_REF_COUNT_MANPATH=/opt/ohpc/pub/apps/intel/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/debugger/gdb-ia/man:1;/opt/ohpc/pub/apps/intel/compilers_and_libraries/linux/man/common:1;/opt/ohpc/pub/apps/intel/documentation_2019/en/man/common:1;/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi/man:3;/lustre/rangsiman/intel/itac/2019.5.041/man:1;/lustre/rangsiman/intel/clck/2019.5/man:1;/lustre/rangsiman/intel/man/common:2;/lustre/rangsiman/intel/documentation_2019/en/debugger/gdb-ia/man:1;/usr/local/share/man:1;/usr/share/man/overrides:1;/usr/share/man/en:1;/usr/share/man:1
+LMOD_COLORIZE=no
+IDB=idb
+I_MPI_ROOT=/lustre/rangsiman/intel/compilers_and_libraries_2019.5.281/linux/mpi
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
+Actual run: 
+RANK=1, NODE=1
+RANK=8, NODE=0
+RANK=12, NODE=0
+RANK=5, NODE=1
+RANK=9, NODE=1
+RANK=13, NODE=1
+RANK=21, NODE=1
+RANK=4, NODE=0
+RANK=16, NODE=0
+RANK=17, NODE=1
+RANK=20, NODE=0
+RANK=0, NODE=0
+RANK=3, NODE=1
+RANK=6, NODE=0
+RANK=2, NODE=0
+RANK=10, NODE=0
+RANK=7, NODE=1
+RANK=14, NODE=0
+RANK=22, NODE=0
+RANK=18, NODE=0
+RANK=19, NODE=1
+RANK=15, NODE=1
+RANK=11, NODE=1
+RANK=23, NODE=1
+Number of Heterogeneous data entries for HPL.dat=0
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    1000 
+NB       :     192 
+PMAP     : Row-major process mapping
+P        :       3 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       4 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :  1ringM 
+DEPTH    :       1 
+SWAP     : Mix (threshold = 64)
+L1       : transposed form
+U        : transposed form
+EQUIL    : yes
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+pollux1         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=   33.34
+pollux1         : Column=000384 Fraction=0.195 Kernel=   20.04 Mflops=   26.58
+pollux1         : Column=000576 Fraction=0.385 Kernel=    9.87 Mflops=   20.72
+pollux2         : Column=000768 Fraction=0.595 Kernel=    4.09 Mflops=   16.43
+pollux2         : Column=000960 Fraction=0.795 Kernel=    1.11 Mflops=   14.06
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR11C2R4        1000   192     3     4              49.38            1.35303e-02
+HPL_pdgesv() start time Sun Dec 15 14:03:34 2019
+
+HPL_pdgesv() end time   Sun Dec 15 14:04:24 2019
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0079804 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Done: Sun Dec 15 14:04:25 +07 2019

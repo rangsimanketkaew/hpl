@@ -1,0 +1,96 @@
+This job's process 0 host is:  pollux1
+MPI request
+24
+12
+RANK=1, NODE=1
+RANK=3, NODE=3
+RANK=6, NODE=6
+RANK=2, NODE=2
+RANK=7, NODE=7
+RANK=5, NODE=5
+RANK=4, NODE=4
+RANK=0, NODE=0
+RANK=8, NODE=8
+RANK=9, NODE=9
+RANK=10, NODE=10
+RANK=11, NODE=11
+RANK=13, NODE=1
+RANK=15, NODE=3
+RANK=14, NODE=2
+RANK=12, NODE=0
+RANK=23, NODE=11
+RANK=17, NODE=5
+RANK=21, NODE=9
+RANK=22, NODE=10
+RANK=18, NODE=6
+RANK=19, NODE=7
+RANK=20, NODE=8
+RANK=16, NODE=4
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    1000 
+NB       :     192 
+PMAP     : Column-major process mapping
+P        :       3 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       2 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :   1ring 
+DEPTH    :       0 
+SWAP     : Binary-exchange
+L1       : no-transposed form
+U        : no-transposed form
+EQUIL    : no
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+pollux1         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=   13.78
+pollux1         : Column=000384 Fraction=0.195 Kernel=   10.36 Mflops=   12.23
+pollux1         : Column=000576 Fraction=0.385 Kernel=    5.38 Mflops=   10.07
+pollux1         : Column=000768 Fraction=0.595 Kernel=    2.28 Mflops=    8.26
+pollux1         : Column=000960 Fraction=0.795 Kernel=    0.75 Mflops=    7.36
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        1000   192     3     4              94.07            7.10290e-03
+HPL_pdgesv() start time Sun Dec 15 16:19:42 2019
+
+HPL_pdgesv() end time   Sun Dec 15 16:21:16 2019
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0061033 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
